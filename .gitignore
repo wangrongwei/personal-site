@@ -1,0 +1,6 @@
+/.si/
+/.autogit/
+*.o
+*.txt
+*.elf
+*.bin
