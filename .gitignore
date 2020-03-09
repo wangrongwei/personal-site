@@ -1,4 +1,5 @@
 /.si/
+/.vscode/
 /.autogit/
 *.o
 *.txt
