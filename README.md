@@ -19,9 +19,13 @@ In this project, main.js file was written based on nodejs, and it need to insert
 
 ## TODO
 
-- combine with jekyll;
+- combine with jekyll (**in progress**);
 - day/night (background switch);
 - support markdown file;
 - support word file (write blog or article in office);
 - make this site modularization;
 - blog-template: using the default template of cnblog;
+
+## CMD
+
+- bundle exec jekyll serve

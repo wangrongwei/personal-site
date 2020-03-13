@@ -1,0 +1,17 @@
+
+# Site settings
+title: Evan's world
+email: Evan@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  个人博客。
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://evan.com" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+github_username:  Evan
+disqus: Evan
+
+# Build settings
+
+
+permalink: /:year/:month/:day/:title.html
+
