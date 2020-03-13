@@ -1,10 +1,10 @@
 ---
 layout: default
 permalink: /tech/
+description: 技术
 ---
 
 {{ site.description }}
-
 
 <div class="home">
 

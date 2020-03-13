@@ -26,6 +26,10 @@ In this project, main.js file was written based on nodejs, and it need to insert
 - make this site modularization;
 - blog-template: using the default template of cnblog;
 
+## Reference
+
+- https://jekyllrb.com/docs/step-by-step/
+
 ## CMD
 
 - bundle exec jekyll serve

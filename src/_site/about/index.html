@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>关于</title>
-  <meta name="description" content="个人博客。
+  <meta name="description" content="个人博客
 ">
 
   <link rel="stylesheet" href="/css/main.css">
@@ -66,9 +66,47 @@
   </header>
 
   <article class="post-content">
-    <p>个人博客。</p>
+    <p>个人博客</p>
 
   </article>
+  
+</div>
+
+<!-- Sidebar Container -->
+<div class="sidebar-container
+  col-lg-8 col-lg-offset-2
+  col-md-10 col-md-offset-1 ">
+
+  <!-- Friends Blog -->
+  
+</div>
+</div>
+</div>
+</article>
+
+<!-- resize header to fullscreen keynotes -->
+<script>
+var $header = document.getElementsByTagName("header")[0];
+function resize(){
+/*
+* leave 85px to both
+* - told/imply users that there has more content below
+* - let user can scroll in mobile device, seeing the keynote-view is unscrollable
+*/
+$header.style.height = (window.innerHeight-85) + 'px';
+}
+document.addEventListener('DOMContentLoaded', function(){
+resize();
+})
+window.addEventListener('load', function(){
+resize();
+})
+window.addEventListener('resize', function(){
+resize();
+})
+resize();
+</script>
+
 
 </div>
 
@@ -104,7 +142,7 @@
                 </ul>
             </div>
             <div class="footer-col  footer-col-3">
-                <p class="text">个人博客。
+                <p class="text">个人博客
 </p>
             </div>
         </div>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 为何编程？
+comments: true
 tags: programming
 ---
 
