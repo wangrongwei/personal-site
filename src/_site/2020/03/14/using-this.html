@@ -8,14 +8,14 @@
 
   <title>
       
-        为何编程？
+        如何使用该主题？
       
 
   </title>
-  <meta name="description" content="为何编程？">
+  <meta name="description" content="如何使用该主题？">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2014/03/25/why-programming.html">
+  <link rel="canonical" href="http://localhost:4000/2020/03/14/using-this.html">
   <link rel="alternate" type="application/rss+xml" title="Evan's world" href="http://localhost:4000/feed.xml" />
 </head>
 
@@ -68,8 +68,8 @@
       <div class="wrapper">
         <div class="post">
     <header class="post-header">
-        <h1 class="post-title">为何编程？</h1>
-        <p class="post-meta">Mar 25, 2014</p>
+        <h1 class="post-title">如何使用该主题？</h1>
+        <p class="post-meta">Mar 14, 2020</p>
     </header>
     <article class="post-content">
         <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
@@ -276,17 +276,70 @@
     }
 </style>
 
-        <h1 id="为何编程">为何编程？</h1>
+        <h1 id="如何使用该主题">如何使用该主题？</h1>
 
-<p>也许就是因为这些：<a href="http://www.zhihu.com/question/23120049">用编程实现 “hello world”，神奇在什么地方？</a></p>
+<h2 id="配置概述">配置概述</h2>
 
+<ul>
+  <li>_config.yml</li>
+</ul>
+
+<p>主要配置文件，用户可修改站点名、邮件、Github等信息。</p>
+
+<p>以下为disqus评论系统配置信息：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>disqus_username: 你的Username
+disqus: Evan
+</code></pre></div></div>
+
+<p>用户在使用该主题前，必须对其进行修改或空置，该项勿随机配置。若需要保留该配置，需前往disqus官网进行注册（需VPN）。</p>
+
+<ul>
+  <li>blog.md</li>
+</ul>
+
+<p>博客，对博客文章进行展示，在本主题中包括博客、学术、工程三类，对其进行分开展示。</p>
+
+<ul>
+  <li>notice.md</li>
+</ul>
+
+<p>博客说明。</p>
+
+<ul>
+  <li>index.md</li>
+</ul>
+
+<p>首页，主要对include目录下的index.html进行引用，可以进行优化。</p>
+
+<ul>
+  <li>CNAME</li>
+</ul>
+
+<p>个性域名，需要使用者自己购买域名配置在此处配置。</p>
+
+<ul>
+  <li>Evan</li>
+</ul>
+
+<p>该主题名，用户可第一时间修改。</p>
+
+<h2 id="配置说明">配置说明</h2>
+
+<p>待补充。</p>
+
+<h2 id="其他">其他</h2>
+
+<p>若使用者对jekyll的语法不够熟悉，且计划对代码和布局进行修改，推荐先阅读jekyll提供的<a href="https://jekyllrb.com/docs/step-by-step/01-setup/">step-by-step</a>。</p>
+
+<p>enjoy!</p>
 
     </article>
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'Evan';
-        var disqus_identifier = '/2014/03/25/why-programming';
+        var disqus_identifier = '/2020/03/14/using-this';
 
         (function () {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 	<head>
@@ -30,7 +30,7 @@
 					<ul class="button-group">
 						<li><a href="#about" class="button">About</a></li>
 						<li><a href="#work" class="button">Websites</a></li>
-						<li><a href="#blog" class="button">blog</a></li>
+						<li><a href="#academic" class="button">Academic</a></li>
 						<li><a href="#projects" class="button">Projects</a></li>
 						<li><a href="#contact" class="button">Contact</a></li>
 					</ul>
@@ -127,11 +127,43 @@
 							</p>
 						</li> -->
                     </ul>
-                    <h5><a href="tech/">Read more...</a></h5>
+                    <h5><a href="blog/">Read more...</a></h5>
 				</div>
 			</div>
 		</div>
-		<hr>
+        <hr>
+        <div class="academic">
+			<div id="academic" class="row">
+				<div class="large-12 columns">
+					<h4>Academic</h4>
+					<p>Here are some papers I have published. </p>
+					<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+						<li>
+							<a href="index.html">
+								<img src="img/Website-snapshots/MESA-Website.png">
+								<aside><small>UPDATE: website has since been taken down</small></aside>
+								<p>object, Description text</p>
+							</a>
+						</li>
+						<li>
+							<a href="index.html">
+								<img src="img/Website-snapshots/Razzberry-Website.png">
+								<p>object, Description text.</p>
+							</a>
+						</li>
+
+						<!-- <li>
+							<img src="img/Website-snapshots/Anderson-Ludgate-Website.png">
+							<p>Anderson Ludgate Consulting, market research firm
+							<aside><small>UPDATE: website has since been redesigned elsewhere</small></aside>
+							</p>
+						</li> -->
+                    </ul>
+                    <h5><a href="blog/">Read more...</a></h5>
+				</div>
+			</div>
+		</div>
+        <hr>
 		<div class="projects">
 			<div id="projects" class="row">
 				<div class="large-12 columns">
@@ -142,43 +174,43 @@
 						<li>
 							<a href="index.html">
 								<img data-caption="caption 2 here..." src="img/Project-snapshots/GridAI.png">
-								<p>GridAI, a playground for exploring AIs and search algorithms in grid environments. Includes timed modes and generated mazes.</p>
-								<p>Built with Python Flask, Bootstrap, with ES6 and ES7 goodness bundled and transpiled using Webpack and Babel, deployed on Heroku</p>
+								<p>object, Description text</p>
+								<p>Description text</p>
 							</a>
 						</li>
 						<li>
 							<a href="index.html">
 								<img data-caption="caption 2 here..." src="img/Project-snapshots/DangerousNanthy.png">
-								<p>Dangerous Nanthy, a web clone of the classic DOS game Dangerous Dave, with a twist! Free gun and rocket launcher 😉</p>
-								<p>Built with Phaser.io, bundled with Gulp and JSTransformers, deployed on Heroku</p>
+								<p>object, Description text 😉</p>
+								<p>Description text</p>
 							</a>
 						</li>
 						<li>
 							<a href="index.html">
 								<img data-caption="caption 2 here..." src="img/Project-snapshots/APIChooserinator.png">
-								<p>API-Chooserinator, a public linking database for identifying available APIs by data type. </p>
-								<p>Built with Python Flask, Bootstrap, and deployed with Cloud Foundry containers in IBM Bluemix</p>
+								<p>object, Description text. </p>
+								<p>Description text</p>
 							</a>
 						</li>
 						<li>
 							<a href="FractalGen/">
 								<img data-caption="caption 2 here..." src="img/Project-snapshots/FractalGen.png">
-								<p>FractalGen, dizzying [&larr; I mean it, it'll give you a headache] experiments with square fractal generation and animation</p>
-								<p>Built with the [now defunct] Famous.js animation engine and Node.js, bundled with Gulp</p>
+								<p>object, Description text</p>
+								<p>Description text</p>
 							</a>
 						</li>
 						<li>
 							<a href="GPACalculator/">
 								<img data-caption="caption 2 here..." src="img/Project-snapshots/GPACalculator.png">
-								<p>A GPA calculator that also allows customization of the point breakdown for letter grades, something I was looking for and couldn't find in other models. </p>
-								<p>Built with React, Bootstrap, Material-Bootstrap, ES6 and JSX bundled with Gulp and Babel</p>
+								<p>object, Description text</p>
+								<p>Description text</p>
 							</a>
 						</li>
 						<li>
 							<a href="TileStyling/">
 								<img data-caption="caption 2 here..." src="img/Project-snapshots/TileStyling.png">
-								<p>TileStyling, a seamless pattern generator for web and graphic designers.</p>
-								<p>Built with EaselJS and HTML5 canvas</p>
+								<p>object, Description text.</p>
+								<p>Description text</p>
 							</a>
 						</li>
 					</ul>
@@ -246,8 +278,17 @@
 					</a>
 				</div>
 				<div class="large-4 columns">
-					<strong>Twitter</strong>: @Evan
-				</div>
+                    <strong>Github</strong>: 
+                    {% if site.github_username %}
+                        <a href="https://github.com/{{ site.github_username }}">
+                            <span class="icon  icon--github">
+
+                            </span>
+                            <span class="username">{{ site.github_username }}</span>
+                        </a>
+                    {% endif %}
+                </div>
+
 				<div class="large-4 columns">
 					<strong>Weibo</strong>: @Evan
 				</div>
@@ -256,20 +297,6 @@
 				</div>
 			</div>
 		</div>
-		<footer class="row">
-			<div class="large-12 columns">
-				<div class="row">
-					<div class="large-6 columns">
-						<p>© Evan 2019-2020</p>
-					</div>
-					<div class="large-6 columns">
-						<ul class="inline-list right">
-							<!--<li><a href="#">Suscribe</a></li>-->
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
 		<a class="scrollup" href="#top"></a>
 		<script src='js/vendor/fastclick.js'></script>
 		<script src="js/vendor/jquery.js"></script>

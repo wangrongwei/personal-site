@@ -1,14 +1,13 @@
 ---
-layout: default
-permalink: /tech/
-description: 技术
+layout: post-list
+permalink: /blog/
+title: 博客
 ---
 
-{{ site.description }}
-
+{{ post.title }}
 <div class="home">
 
-  <h1 class="page-heading">文章</h1>
+  
 
   <ul class="post-list">
     {% for post in site.posts %}

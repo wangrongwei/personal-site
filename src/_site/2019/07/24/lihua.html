@@ -6,7 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>梨花</title>
+  <title>
+      
+        梨花
+      
+
+  </title>
   <meta name="description" content="梨花">
 
   <link rel="stylesheet" href="/css/main.css">
@@ -21,7 +26,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">Evan's world</a>
+    <a class="site-title" href="/">&laquo;back</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -35,7 +40,7 @@
       <div class="trigger">
         
           
-          <a class="page-link" href="/about/">关于</a>
+          <a class="page-link" href="/blog/">博客</a>
           
         
           
@@ -44,6 +49,10 @@
         
           
         
+          
+        
+          
+          <a class="page-link" href="/notice/">说明</a>
           
         
           
@@ -55,7 +64,6 @@
 
 </header>
 
-
     <div class="page-content">
       <div class="wrapper">
         <div class="post">
@@ -64,6 +72,210 @@
         <p class="post-meta">Jul 24, 2019</p>
     </header>
     <article class="post-content">
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+ //是否显示导航栏
+ var showNavBar = true;
+ //是否展开导航栏
+ var expandNavBar = true;
+
+ $(document).ready(function(){
+    var h1s = $("body").find("h1");
+    var h2s = $("body").find("h2");
+    var h3s = $("body").find("h3");
+    var h4s = $("body").find("h4");
+    //var h5s = $("body").find("h5");
+    //var h6s = $("body").find("h6");
+
+    var headCounts = [h1s.length, h2s.length, h3s.length, h4s.length];
+    var vH1Tag = null;
+    var vH2Tag = null;
+    var vH3Tag = null;
+    var vH4Tag = null;
+    for(var i = 0; i < headCounts.length; i++){
+        if(headCounts[i] > 0){
+            if(vH1Tag == null){
+                vH1Tag = 'h' + (i + 1);
+            }
+            else if(vH2Tag == null){
+                vH2Tag = 'h' + (i + 1);
+            }
+            else if(vH3Tag == null){
+                vH3Tag = 'h' + (i + 1);
+            }
+            else if(vH4Tag == null){
+                vH4Tag = 'h' + (i + 1);
+            }
+        }
+    }
+    if(vH1Tag == null){
+        return;
+    }
+
+    //$("body").prepend('<div class="BlogAnchor">' + 
+    $("main").after('<div class="BlogAnchor">' +
+        '<span style="color:red;position:absolute;top:-6px;left:0px;cursor:pointer;" οnclick="$(\'.BlogAnchor\').hide();">×</span>' +
+        '<p>' + 
+            '<b id="AnchorContentToggle" title="收起" style="cursor:pointer;">目录▲</b>' + 
+        '</p>' + 
+        '<div class="AnchorContent" id="AnchorContent"> </div>' + 
+    '</div>' );
+
+    var vH1Index = 0;
+    var vH2Index = 0;
+    var vH3Index = 0;
+    var vH4Index = 0;
+    $("main").find("h1,h2,h3,h4").each(function(i,item){
+        var id = '';
+        var name = '';
+        var tag = $(item).get(0).tagName.toLowerCase();
+        var className = '';
+        if(tag == vH1Tag){
+            id = name = ++vH1Index;
+            name = id;
+            vH2Index = 0;
+            className = 'item_h1';
+        }
+        else if(tag == vH2Tag){
+            id = vH1Index + '_' + ++vH2Index;
+            name = vH1Index + '.' + vH2Index;
+            vH3Index = 0;
+            className = 'item_h2';
+        }
+        else if(tag == vH3Tag){
+            id = vH1Index + '_' + vH2Index + ++vH3Index;
+            name = vH1Index + '.' + vH2Index + '.' + vH3Index;
+            vH4Index = 0;
+            className = 'item_h3';
+        }
+        else if(tag == vH4Tag){
+            id = vH1Index + '_' + vH2Index + vH3Index + ++vH4Index;
+            name = vH1Index + '.' + vH2Index + '.' + vH3Index + '.' + vH4Index;
+            className = 'item_h4';
+        }
+
+        $(item).attr("id","wow"+id);
+        $(item).addClass("wow_head");
+        $("#AnchorContent").css('max-height', ($(window).height() - 180) + 'px');
+        $("#AnchorContent").append('<li><a class="nav_item '+className+' anchor-link" οnclick="return false;" href="#" link="#wow'+id+'">'+name+" · "+$(this).text()+'</a></li>');
+    });
+
+    $("#AnchorContentToggle").click(function(){
+        var text = $(this).html();
+        if(text=="目录▲"){
+            $(this).html("目录▼");
+            $(this).attr({"title":"展开"});
+        }else{
+            $(this).html("目录▲");
+            $(this).attr({"title":"收起"});
+        }
+        $("#AnchorContent").toggle();
+    });
+    $(".anchor-link").click(function(){
+        $("html,body").animate({scrollTop: $($(this).attr("link")).offset().top}, 500);
+    });
+
+    var headerNavs = $(".BlogAnchor li .nav_item");
+    var headerTops = [];
+    $(".wow_head").each(function(i, n){
+        headerTops.push($(n).offset().top);
+    });
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        $.each(headerTops, function(i, n){
+            var distance = n - scrollTop;
+            if(distance >= 0){
+                $(".BlogAnchor li .nav_item.current").removeClass('current');
+                $(headerNavs[i]).addClass('current');
+                return false;
+            }
+        });
+    });
+
+    if(!showNavBar){
+        $('.BlogAnchor').hide();
+    }
+    if(!expandNavBar){
+        $(this).html("目录▼");
+        $(this).attr({"title":"展开"});
+        $("#AnchorContent").hide();
+    }
+ });
+</script>
+<style>
+    /*导航*/
+    .BlogAnchor {
+        float: left;
+	    position: -webkit-sticky;
+	    position: sticky;
+	    top: 0;
+	    padding: 5px;
+
+        background: #f1f1f1;
+        padding: 10px;
+        line-height: 180%;
+        /*position: fixed;*/
+        /*right: 48px;*/
+        /*top: 100px;*/
+        border: 1px solid #aaaaaa;
+    }
+    .BlogAnchor p {
+        font-size: 18px;
+        color: #15a230;
+        margin: 0 0 0.3rem 0;
+        text-align: right;
+    }
+    .BlogAnchor .AnchorContent {
+        padding: 5px 0px;
+        overflow: auto;
+    }
+    .BlogAnchor li{
+        text-indent: 0.5rem;
+        font-size: 14px;
+        list-style: none;
+    }
+    .BlogAnchor li .nav_item{
+        padding: 3px;
+        margin-left: 1rem;
+    }
+    .BlogAnchor li .item_h1{
+        margin-left: 0rem;
+    }
+    .BlogAnchor li .item_h2{
+        margin-left: 2rem;
+        font-size: 0.8rem;
+    }
+    .BlogAnchor li .item_h3{
+        margin-left: 3rem;
+        font-size: 0.8rem;
+    }
+    .BlogAnchor li .item_h4{
+        margin-left: 4rem;
+        font-size: 0.8rem;
+    }
+
+    .BlogAnchor li .nav_item.current{
+        color: white;
+        background-color: #5cc26f;
+    }
+    #AnchorContentToggle {
+        font-size: 13px;
+        font-weight: normal;
+        color: #FFF;
+        display: inline-block;
+        line-height: 20px;
+        background: #5cc26f;
+        font-style: normal;
+        padding: 1px 8px;
+    }
+    .BlogAnchor a:hover {
+        color: #5cc26f;
+    }
+    .BlogAnchor a {
+        text-decoration: none;
+    }
+</style>
+
         <h1 id="梨花">梨花</h1>
 
 <p>每到四月份，玉渊潭的樱花开了，就想起小时候邻居家的梨树开满梨花，洁白，清新。</p>
@@ -88,12 +300,12 @@
 
     <footer class="site-footer">
     <div class="wrapper">
-        <h2 class="footer-heading">Evan's world</h2>
+        <h2 class="footer-heading">blog</h2>
         <div class="footer-col-wrapper">
             <div class="footer-col  footer-col-1">
                 <ul class="contact-list">
                     <li>Evan's world</li>
-                    <li><a href="mailto:Evan@gmail.com">Evan@gmail.com</a></li>
+                    <li><a href="mailto:<Your Email>"><Your Email></a></li>
                 </ul>
             </div>
             <div class="footer-col  footer-col-2">
@@ -115,11 +327,23 @@
                 </ul>
             </div>
             <div class="footer-col  footer-col-3">
-                <p class="text">个人博客
-</p>
+                <p class="text">个人博客</p>
+            </div>
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>© Evan 2019-2020</p>
+                    </div>
+                    <div class="large-6 columns">
+                        <ul class="inline-list right">
+                            <!--<li><a href="#">Suscribe</a></li>-->
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </footer>
 <script>
     var _hmt = _hmt || [];
