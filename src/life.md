@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: post-list
+title: 生活
 permalink: /life/
 ---
 
