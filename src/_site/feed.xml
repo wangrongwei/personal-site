@@ -5,9 +5,70 @@
     <description>个人博客</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 May 2020 23:29:49 +0800</pubDate>
-    <lastBuildDate>Tue, 19 May 2020 23:29:49 +0800</lastBuildDate>
+    <pubDate>Sat, 23 May 2020 02:32:08 +0800</pubDate>
+    <lastBuildDate>Sat, 23 May 2020 02:32:08 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>如何写论文摘要</title>
+        <description>&lt;h1 id=&quot;如何写论文摘要&quot;&gt;如何写论文摘要&lt;/h1&gt;
+
+&lt;h3 id=&quot;概述&quot;&gt;概述&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;反复读，然后修改；&lt;/li&gt;
+  &lt;li&gt;减少口语化；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;总体结构&quot;&gt;总体结构&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一句话总结论文背景；&lt;/li&gt;
+  &lt;li&gt;一句话概述意义；&lt;/li&gt;
+  &lt;li&gt;一句话交代论文所写论文、目的；&lt;/li&gt;
+  &lt;li&gt;分条列举论文结论&lt;/li&gt;
+  &lt;li&gt;一句话结尾，基本相同&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;摘要数字&quot;&gt;摘要数字&lt;/h3&gt;
+
+&lt;p&gt;摘要中的数字可以直观的看出论文所做的工作，其中尽量采用百分比。&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 23 May 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/05/23/how-to-write-ABSTRACT.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/23/how-to-write-ABSTRACT.html</guid>
+        
+        
+        <category>academic</category>
+        
+      </item>
+    
+      <item>
+        <title>一个简易github page实现</title>
+        <description>&lt;h1 id=&quot;一个简易github-page实现&quot;&gt;一个简易github page实现&lt;/h1&gt;
+
+&lt;h3 id=&quot;layout设计&quot;&gt;layout设计&lt;/h3&gt;
+
+&lt;p&gt;提供多个可选择的layout&lt;/p&gt;
+
+&lt;h3 id=&quot;main-pege设计&quot;&gt;main pege设计&lt;/h3&gt;
+
+&lt;p&gt;在index.md中包含index.html&lt;/p&gt;
+
+&lt;h3 id=&quot;_configyml文件&quot;&gt;_config.yml文件&lt;/h3&gt;
+
+&lt;p&gt;如何在html中实现_config文件中的配置&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 23 May 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/05/23/develop-blog.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/23/develop-blog.html</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
     
       <item>
         <title>如何使用该主题？</title>
@@ -74,6 +135,8 @@ disqus: Evan
         <guid isPermaLink="true">http://localhost:4000/2020/03/14/using-this.html</guid>
         
         
+        <category>blog</category>
+        
       </item>
     
       <item>
@@ -114,6 +177,8 @@ disqus: Evan
         <guid isPermaLink="true">http://localhost:4000/2019/07/24/lihua.html</guid>
         
         
+        <category>blog</category>
+        
       </item>
     
       <item>
@@ -127,8 +192,8 @@ disqus: Evan
         <link>http://localhost:4000/2014/03/25/why-programming.html</link>
         <guid isPermaLink="true">http://localhost:4000/2014/03/25/why-programming.html</guid>
         
-        <category>programming</category>
         
+        <category>blog</category>
         
       </item>
     

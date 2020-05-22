@@ -1,7 +1,10 @@
 ---
 layout: post
+categories: blog
 title: 如何使用该主题？
-tags: 
+tags:
+teaser:
+    Snipaste_2020-05-23_01-57-49.jpg
 ---
 
 {{ page.title }}
